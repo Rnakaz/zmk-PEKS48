@@ -1,7 +1,3 @@
-if ZMK_DISPLAY
-config ZMK_WIDGET_RGB_LED_STAUS
-    def_bool y
-endif
 
 if SHIELD_PEKS48_R
 
