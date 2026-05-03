@@ -154,12 +154,13 @@
          #binding-cells = <0>;
          bindings = <&kp RS(N7)>, <&kp RS(N2)>;
          mods = <(MOD_LSFT|MOD_RSFT)>;
-         label = "\";};
-    };
+         label = "bs";
 };
 
 / {
-    keymap {
+    
+behaviors {};
+keymap {
         compatible = "zmk,keymap";
 
         default_layer {
