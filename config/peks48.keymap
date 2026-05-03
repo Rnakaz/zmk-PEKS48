@@ -77,7 +77,7 @@
         u_ast: u_ast {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp SQT>;
+            bindings = <&kp N8>, <&kp LS(SQT)>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "8";
@@ -156,7 +156,7 @@
         layer_1 {
             bindings = <
 &trans  &kp N1  &u_at   &kp N3      &kp N4      &kp N5    &u_caret  &u_amp        &u_ast         &u_lbkt         &u_rbkt         &trans
-&trans  &trans  &trans  &kp AT      &kp LBKT    &trans    &trans    &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6    &kp JP_COLON    &kp JP_UNDERSCORE
+&trans  &trans  &trans  &kp RBKT    &kp SQT     &trans    &trans    &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6    &kp JP_COLON    &kp JP_UNDERSCORE
 &trans  &trans  &trans  &kp LS(N8)  &kp LS(N9)  &trans    &trans    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3    &kp UP_ARROW    &trans
 &trans  &trans  &trans  &trans      &trans      &trans    &trans    &kp NUMBER_0  &kp JP_DQUOTE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
