@@ -72,7 +72,7 @@
             label = "8";
         };
         // 9 と (
-        u_lbrk: u_lbrk {
+        u_lbkt: u_lbkt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp RS(N8)>;
@@ -104,7 +104,7 @@
             label = "`~";
         };
         // ' と "
-        u_quot: u_semi {
+        u_quot: u_quot {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RS(N7)>, <&kp RS(N2)>;
@@ -112,13 +112,6 @@
             label = "'";
         };
 
-        // [ と {
-        u_lbkt: u_lbkt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp RBKT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 };
 
