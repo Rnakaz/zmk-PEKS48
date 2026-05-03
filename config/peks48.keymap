@@ -121,7 +121,7 @@
         u_tilde: u_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RS(AT_SIGN)>, <&kp RS(PLUS)>;
+            bindings = <&kp RS(LBKT)>, <&kp RS(PLUS)>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "`~";
@@ -164,7 +164,7 @@
 
         layer_2 {
             bindings = <
-&trans  &kp EXCLAMATION  &kp LS(LBKT)  &kp POUND  &kp DOLLAR  &kp PERCENT          &kp JP_CARET     &kp JP_AMPERSAND   &kp JP_ASTERISK   &kp MINUS    &kp UNDERSCORE   &trans
+&trans  &kp EXCLAMATION  &kp LS(LBKT)  &kp POUND  &kp DOLLAR  &kp PERCENT          &kp RS(EQUAL)    &kp RS(N6)         &kp RS(SQT)       &kp LS(N8)   &kp LS(N9)       &trans
 &trans  &kp GRAVE        &kp TILDE     &trans     &trans      &trans               &trans           &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp JP_PLUS  &kp JP_ASTERISK  &trans
 &trans  &trans           &trans        &trans     &trans      &kp C_VOLUME_DOWN    &kp C_VOLUME_UP  &trans             &trans            &trans       &trans           &trans
 &trans  &trans           &trans        &trans     &trans      &trans               &trans           &trans             &trans            &trans       &trans           &trans
