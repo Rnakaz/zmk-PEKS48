@@ -156,10 +156,11 @@
          mods = <(MOD_LSFT|MOD_RSFT)>;
          label = "bs";
 };
+};
+};
 
 / {
     
-behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
