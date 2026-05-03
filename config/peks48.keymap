@@ -121,7 +121,7 @@
         u_tilde: u_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RS(N7)>, <&kp RS(PLUS)>;
+            bindings = <&kp RS(AT_SIGN)>, <&kp RS(PLUS)>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "`~";
@@ -155,19 +155,19 @@
 
         layer_1 {
             bindings = <
-&trans  &kp N1  &u_at   &kp N3      &kp N4      &kp N5    &u_caret  &u_amp        &u_ast         &u_lbkt         &u_rbkt         &trans
-&trans  &trans  &trans  &kp RBKT    &kp SQT     &trans    &trans    &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6    &kp JP_COLON    &kp JP_UNDERSCORE
-&trans  &trans  &trans  &kp LS(N8)  &kp LS(N9)  &trans    &trans    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3    &kp UP_ARROW    &trans
-&trans  &trans  &trans  &trans      &trans      &trans    &trans    &kp NUMBER_0  &kp JP_DQUOTE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&trans  &kp N1  &u_at   &kp N3      &kp N4      &kp N5       &u_caret  &u_amp            &u_ast  &u_lbkt         &u_rbkt         &trans
+&trans  &trans  &trans  &kp RBKT    &kp BSLH    &kp SLASH    &trans    &trans            &trans  &trans          &trans          &trans
+&trans  &trans  &trans  &kp LS(N8)  &kp LS(N9)  &trans       &kp LT    &kp GREATER_THAN  &trans  &trans          &kp UP_ARROW    &trans
+&trans  &trans  &trans  &trans      &trans      &trans       &trans    &trans            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 
         layer_2 {
             bindings = <
-&trans  &kp EXCLAMATION  &kp JP_AT  &kp POUND  &kp DOLLAR  &kp PERCENT          &kp JP_CARET     &kp JP_AMPERSAND   &kp JP_ASTERISK   &kp MINUS    &kp UNDERSCORE   &trans
-&trans  &kp GRAVE        &kp TILDE  &trans     &trans      &trans               &trans           &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp JP_PLUS  &kp JP_ASTERISK  &trans
-&trans  &trans           &trans     &trans     &trans      &kp C_VOLUME_DOWN    &kp C_VOLUME_UP  &trans             &trans            &trans       &trans           &trans
-&trans  &trans           &trans     &trans     &trans      &trans               &trans           &trans             &trans            &trans       &trans           &trans
+&trans  &kp EXCLAMATION  &kp LS(LBKT)  &kp POUND  &kp DOLLAR  &kp PERCENT          &kp JP_CARET     &kp JP_AMPERSAND   &kp JP_ASTERISK   &kp MINUS    &kp UNDERSCORE   &trans
+&trans  &kp GRAVE        &kp TILDE     &trans     &trans      &trans               &trans           &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp JP_PLUS  &kp JP_ASTERISK  &trans
+&trans  &trans           &trans        &trans     &trans      &kp C_VOLUME_DOWN    &kp C_VOLUME_UP  &trans             &trans            &trans       &trans           &trans
+&trans  &trans           &trans        &trans     &trans      &trans               &trans           &trans             &trans            &trans       &trans           &trans
             >;
         };
 
