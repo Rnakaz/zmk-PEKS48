@@ -40,130 +40,99 @@
 / {
     behaviors {
         // 2 と @
-
         u_at: u_at {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp LBKT>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "2";
         };
-
         // 6 と ^
-
         u_caret: u_caret {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N6>, <&kp EQUAL>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "6";
         };
-
         // 7 と &
-
         u_amp: u_amp {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N7>, <&kp RS(N6)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "7";
         };
-
         // 8 と *
-
         u_ast: u_ast {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N8>, <&kp LS(SQT)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "8";
         };
 
         // 9 と (
-
         u_lbkt: u_lbkt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp RS(N8)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "9";
         };
-
         // 0 と )
-
         u_rbkt: u_rbkt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp RS(N9)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "0";
         };
-
         // ; と : (US配列の ;/:)
-
         u_semi: u_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SEMI>, <&kp SQT>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = ";";
         };
-
         // ' と ~
-
         u_tilde: u_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RS(LBKT)>, <&kp RS(PLUS)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "`~";
         };
-
         // ' と "
-
         u_quot: u_quot {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RS(N7)>, <&kp RS(N2)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "'";
         };
         // - と _
-
         u_ubar: u_ubar {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RS(N7)>, <&kp RS(N2)>;
-
+            bindings = <&kp N7>, <&kp N2>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "-";
         };
         // = と +
-
         u_pls: u_pls {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RS(N7)>, <&kp RS(N2)>;
-
+            bindings = <&kp RS(N9)>, <&kp RS(N0)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "=";
         };
         // \ と |
-
         u_pipe : u_pipe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RS(N7)>, <&kp RS(N2)>;
-
+            bindings = <&kp RS(N1)>, <&kp RS(N2)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "\";
         };
