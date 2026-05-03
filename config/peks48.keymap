@@ -123,7 +123,7 @@
         // = と +
         u_pls: u_pls {
             compatible = "zmk,behavior-mod-morph";
-            binding-cells = <0>;
+            #binding-cells = <0>;
             bindings = <&kp RS(MINUS)>, <&kp RS(SEMICOLON)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "=";
@@ -131,7 +131,7 @@
         // \ と |
         u_pipe: u_pipe {
             compatible = "zmk,behavior-mod-morph";
-            binding-cells = <0>;
+            #binding-cells = <0>;
             bindings = <&kp INTERNATIONAL_1>, <&kp RS(INTERNATIONAL_3)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "\";
