@@ -137,6 +137,36 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "'";
         };
+        // - と _
+
+        u_ubar: u_bar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RS(N7)>, <&kp RS(N2)>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "-";
+        };
+        // = と +
+
+        u_pls: u_pls {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RS(N7)>, <&kp RS(N2)>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "=";
+        };
+        // \ と |
+
+        u_pipe : u_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RS(N7)>, <&kp RS(N2)>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "\";
+        };
     };
 };
 
