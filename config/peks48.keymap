@@ -111,7 +111,6 @@
             bindings = <&kp RS(N7)>, <&kp RS(N2)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "'";
-        abel = "=";
          };u_ubar: u_ubar {
       compatible = "zmk,behavior-mod-morph";
     
