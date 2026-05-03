@@ -139,7 +139,7 @@
         };
         // - と _
 
-        u_ubar: u_bar {
+        u_ubar: u_ubar {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RS(N7)>, <&kp RS(N2)>;
