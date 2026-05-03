@@ -111,25 +111,7 @@
             bindings = <&kp RS(N7)>, <&kp RS(N2)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "'";
-         };u_ubar: u_ubar {
-      compatible = "zmk,behavior-mod-morph";
-    
-         #binding-cells = <0>;
-         bindings = <&kp MINUS>, <&kp RS(INTERNATIONAL_1)>;
-         mods = <(MOD_LSFT|MOD_RSFT)>;
-         label = "-";};u_pls: u_pls {
-      compatible = "zmk,behavior-mod-morph";
-    
-         #binding-cells = <0>;
-         bindings = <&kp RS(MINUS)>, <&kp RS(SEMICOLON)>;
-         mods = <(MOD_LSFT|MOD_RSFT)>;
-         label = "=";};u_pipe: u_pipe {
-      compatible = "zmk,behavior-mod-morph";
-    
-         #binding-cells = <0>;
-         bindings = <&kp INTERNATIONAL_1>, <&kp RS(INTERNATIONAL_3)>;
-         mods = <(MOD_LSFT|MOD_RSFT)>;
-         label = "\";};
+         };
     };
 };
 
