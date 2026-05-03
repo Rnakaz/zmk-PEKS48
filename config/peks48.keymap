@@ -164,10 +164,10 @@
 
         layer_2 {
             bindings = <
-&trans  &kp EXCLAMATION  &kp LS(LBKT)  &kp POUND  &kp DOLLAR  &kp PERCENT          &kp RS(EQUAL)    &kp RS(N6)         &kp RS(SQT)       &kp LS(N8)   &kp LS(N9)       &trans
-&trans  &kp GRAVE        &kp RS(PLUS)  &trans     &trans      &trans               &trans           &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp JP_PLUS  &kp JP_ASTERISK  &trans
-&trans  &trans           &trans        &trans     &trans      &kp C_VOLUME_DOWN    &kp C_VOLUME_UP  &trans             &trans            &trans       &trans           &trans
-&trans  &trans           &trans        &trans     &trans      &trans               &trans           &trans             &trans            &trans       &trans           &trans
+&trans  &kp EXCLAMATION  &kp LBKT      &kp POUND  &kp DOLLAR  &kp PERCENT          &kp EQUAL        &kp RS(N6)     &kp RS(SQT)        &kp LS(N8)   &kp LS(N9)  &trans
+&trans  &kp RS(PLUS)     &kp RS(LBKT)  &trans     &trans      &trans               &trans           &kp MINUS      &kp RS(MINUS)      &kp JP_PLUS  &kp RS(N7)  &trans
+&trans  &trans           &trans        &trans     &trans      &kp C_VOLUME_DOWN    &kp C_VOLUME_UP  &kp RS(MINUS)  &kp RS(SEMICOLON)  &trans       &kp RS(N2)  &trans
+&trans  &trans           &trans        &trans     &trans      &trans               &trans           &trans         &trans             &trans       &trans      &trans
             >;
         };
 
