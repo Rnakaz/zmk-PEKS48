@@ -39,86 +39,85 @@
 
 / {
     behaviors {
-        // 2 と @ (US配列の 2/@)
-
+        // 2 と @
         u_at: u_at {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp LBKT>;
-
-            // JISではLBKTが@
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "2";
         };
-
-        // 6 と ^ (US配列の 6/^)
-
+        // 6 と ^
         u_caret: u_caret {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N6>, <&kp EQUAL>;
-
-            // JISではEQUALが^
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "6";
         };
-
-        // 7 と & (US配列の 7/&)
-
+        // 7 と &
         u_amp: u_amp {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N7>, <&kp RS(N6)>;
-
-            // Shift+6が&になるよう維持
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "7";
         };
-
-        // 8 と * (US配列の 8/*)
-
+        // 8 と *
         u_ast: u_ast {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N8>, <&kp SQT>;
-
-            // JISではSQT(単押し)が: なので注意が必要
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
-
-            // ※JISの「*」は単独キー(QUOT)なので、Shift判定で飛ばす
-
             label = "8";
         };
-
+        // 9 と (
+        u_lbrk: u_lbrk {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp RS(N8)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "9";
+        };
+        // 0 と )
+        u_zero: u_zero {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp RS(N9)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "0";
+        };
         // ; と : (US配列の ;/:)
-
         u_semi: u_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SEMI>, <&kp SQT>;
-
-            // JISではSQTが:
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = ";";
         };
+        // ' と ~
+        u_tilde: u_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RS(N7)>, <&kp RS(N2)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "`~";
+        };
+        // ' と "
+        u_quot: u_semi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RS(N7)>, <&kp RS(N2)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "'";
+        };
 
-        // [ と { (US配列の [/{)
-
+        // [ と {
         u_lbkt: u_lbkt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RBKT>, <&kp RBKT>;
-
-            // JISではRBKTが[
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
-
-            // ※Shift時はOS側がJISの{を出すため同じキーでOK
         };
     };
 };
