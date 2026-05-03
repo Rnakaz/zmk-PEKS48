@@ -40,52 +40,72 @@
 / {
     behaviors {
         // 2 と @ (US配列の 2/@)
+
         u_at: u_at {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp LBKT>; // JISではLBKTが@
+            bindings = <&kp N2>, <&kp LBKT>;
+ // JISではLBKTが@
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "2";
         };
 
         // 6 と ^ (US配列の 6/^)
+
         u_caret: u_caret {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N6>, <&kp EQUAL>; // JISではEQUALが^
+            bindings = <&kp N6>, <&kp EQUAL>;
+ // JISではEQUALが^
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "6";
         };
 
         // 7 と & (US配列の 7/&)
+
         u_amp: u_amp {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N7>, <&kp AMPS>; // Shift+6が&になるよう維持
+            bindings = <&kp N7>, <&kp AMPS>;
+ // Shift+6が&になるよう維持
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "7";
         };
 
         // 8 と * (US配列の 8/*)
+
         u_ast: u_ast {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp SQT>; // JISではSQT(単押し)が: なので注意が必要
+            bindings = <&kp N8>, <&kp SQT>;
+ // JISではSQT(単押し)が: なので注意が必要
             mods = <(MOD_LSFT|MOD_RSFT)>;
+
             // ※JISの「*」は単独キー(QUOT)なので、Shift判定で飛ばす
+
+            label = "8";
         };
 
         // ; と : (US配列の ;/:)
+
         u_semi: u_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SEMI>, <&kp SQT>; // JISではSQTが:
+            bindings = <&kp SEMI>, <&kp SQT>;
+ // JISではSQTが:
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = ";";
         };
 
         // [ と { (US配列の [/{)
+
         u_lbkt: u_lbkt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp RBKT>; // JISではRBKTが[
+            bindings = <&kp RBKT>, <&kp RBKT>;
+ // JISではRBKTが[
             mods = <(MOD_LSFT|MOD_RSFT)>;
+
             // ※Shift時はOS側がJISの{を出すため同じキーでOK
         };
     };
@@ -98,7 +118,7 @@
         default_layer {
             bindings = <
 &kp ESC           &kp Q     &kp W         &kp E       &kp R      &kp T          &kp Y        &kp U        &kp I      &kp O      &kp P       &kp BACKSPACE
-&kp TAB           &kp A     &kp S         &kp D       &kp F      &kp G          &kp H        &kp J        &kp K      &kp L      &kp SEMI    &kp ENTER
+&kp TAB           &kp A     &kp S         &kp D       &kp F      &kp G          &kp H        &kp J        &kp K      &kp L      &u_semi     &kp ENTER
 &kp LEFT_SHIFT    &kp Z     &kp X         &kp C       &kp V      &kp B          &kp N        &kp M        &kp COMMA  &kp DOT    &kp SLASH   &kp RSHIFT
 &kp LEFT_CONTROL  &kp LWIN  &kp LEFT_ALT  &kp TILDE2  &kp ENTER  &lt 1 SPACE    &lt 2 SPACE  &lt 3 ENTER  &kp APOS   &kp GRAVE  &kp DELETE  &kp RIGHT_CONTROL
             >;
@@ -106,10 +126,10 @@
 
         layer_1 {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3                &kp N4                 &kp N5    &kp N6  &kp N7        &kp N8         &kp N9          &kp N0          &trans
-&trans  &trans  &trans  &kp LBKT              &kp RBKT               &trans    &trans  &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6    &kp JP_COLON    &kp JP_UNDERSCORE
-&trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3    &kp UP_ARROW    &trans
-&trans  &trans  &trans  &trans                &trans                 &trans    &trans  &kp NUMBER_0  &kp JP_DQUOTE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&trans  &kp N1  &u_at   &kp N3                &kp N4                 &kp N5    &u_caret  &u_amp        &u_ast         &kp N9          &kp N0          &trans
+&trans  &trans  &trans  &kp LBKT              &kp RBKT               &trans    &trans    &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6    &kp JP_COLON    &kp JP_UNDERSCORE
+&trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3    &kp UP_ARROW    &trans
+&trans  &trans  &trans  &trans                &trans                 &trans    &trans    &kp NUMBER_0  &kp JP_DQUOTE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 
